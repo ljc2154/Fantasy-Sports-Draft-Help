@@ -68,9 +68,9 @@ def handle_rank_command(draft_board, args):
             else:
                 print 'Error: There were no available players that met your requirements. Try a different position?'
         else:
-            print 'Usage Error: Expert not found. Format should be \"rank <expert> <position> <count>\".'
+            print 'Usage Error: Expert not found. Format should be \"rank <expert> <position>\".'
     else:
-        print 'Usage Error: No expert provided. Format should be \"rank <expert> <position> <count>\".'
+        print 'Usage Error: No expert provided. Format should be \"rank <expert> <position>\".'
 
 """
 Depending on the value of command, attempts to draft a player from or re-add a player to the draft board.
@@ -120,7 +120,8 @@ def handle_user_interaction(draft_board):
 Initializes the draft board and allows a user to manipulate it.
 """
 def main():
-    draft_board = DraftBoard(S_RANKINGS_FILENAME, S_PLAYER_NAME_HEADER, S_POSITION_HEADER, L_PLAYER_DATA_HEADERS, get_experts_list())
+    # draft_board = DraftBoard(S_RANKINGS_FILENAME, S_PLAYER_NAME_HEADER, S_POSITION_HEADER, L_PLAYER_DATA_HEADERS, get_experts_list())
+    draft_board = DraftBoard()
     handle_user_interaction(draft_board)
 
 ######################
